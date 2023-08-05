@@ -1,6 +1,6 @@
-package com.example.pp3_1_2.web.Controllers;
+package com.example.pp3_1_2.web.controllers;
 
-import com.example.pp3_1_2.web.Model.User;
+import com.example.pp3_1_2.web.model.User;
 import com.example.pp3_1_2.web.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

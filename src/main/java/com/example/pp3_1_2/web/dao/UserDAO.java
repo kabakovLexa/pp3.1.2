@@ -1,8 +1,8 @@
-package com.example.pp3_1_2.web.Dao;
+package com.example.pp3_1_2.web.dao;
 
 
 
-import com.example.pp3_1_2.web.Model.User;
+import com.example.pp3_1_2.web.model.User;
 
 import java.util.List;
 

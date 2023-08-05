@@ -1,6 +1,6 @@
-package com.example.pp3_1_2.web.Dao;
+package com.example.pp3_1_2.web.dao;
 
-import com.example.pp3_1_2.web.Model.User;
+import com.example.pp3_1_2.web.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;

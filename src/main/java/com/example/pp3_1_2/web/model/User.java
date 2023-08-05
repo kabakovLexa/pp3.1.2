@@ -1,4 +1,4 @@
-package com.example.pp3_1_2.web.Model;
+package com.example.pp3_1_2.web.model;
 
 import jakarta.persistence.*;
 
