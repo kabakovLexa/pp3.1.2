@@ -3,6 +3,7 @@ package com.example.pp3_1_2.web.controllers;
 import com.example.pp3_1_2.web.model.User;
 import com.example.pp3_1_2.web.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -27,7 +28,7 @@ public class UserController {
     }
 
     @PostMapping("/search")
-    public String searchUserId(@RequestParam int id, Model model) {
+    public String searchUserId(@RequestParam Long id, Model model) {
         User user = userService.getUserId(id);
         model.addAttribute("user", user);
         return "showUserId";
@@ -46,22 +47,22 @@ public class UserController {
     }
 
     @GetMapping("/{id}/edit")
-    public String editUserForm(ModelMap model, @PathVariable("id") int id) {
+    public String editUserForm(ModelMap model, @PathVariable("id") Long id) {
         model.addAttribute("user", userService.getUserId(id));
         return "edit";
     }
 
     @PutMapping("/{id}")
     public String editUser(@ModelAttribute("user") User user,
-                           BindingResult bindingResult, @PathVariable("id") int id) {
+                           BindingResult bindingResult, @PathVariable("id") Long id) {
         if (bindingResult.hasErrors())
             return "/edit";
-        userService.updateUser(id, user);
+        userService.updateUser(user);
         return "redirect:/";
     }
 
     @DeleteMapping("/{id}")
-    public String deleteUser(@PathVariable("id") int id) {
+    public String deleteUser(@PathVariable("id") Long id) {
         userService.deleteUser(id);
         return "redirect:/";
     }

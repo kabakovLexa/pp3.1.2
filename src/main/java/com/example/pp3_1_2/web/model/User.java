@@ -8,28 +8,28 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Long id;
     @Column(name = "name")
     private String name;
     @Column(name = "surname")
     private String surname;
     @Column(name = "salary")
-    private int salary;
+    private Double salary;
 
     public User() {
     }
 
-    public User(String name, String surname, int salary) {
+    public User(String name, String surname, Double salary) {
         this.name = name;
         this.surname = surname;
         this.salary = salary;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -49,11 +49,11 @@ public class User {
         this.surname = surname;
     }
 
-    public int getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
 }
